@@ -70,6 +70,11 @@ class Characters(sublime_plugin.EventListener):
                         name = name.split(' (OS)')[0]
                         name = name.split(' (VO)')[0]
                         name = name.split(" (CONT'D)")[0]
+
+                        # swedish
+                        name = name.split(' (U.B.)')[0]
+                        name = name.split(' (FORTS.)')[0]
+
                         if name[0] == ' ' or name[0] == '\t':
                             name = re.split(r'^\s*', name)[1]
                         if name not in self.characters and name != '' and name is not None:
@@ -172,6 +177,11 @@ class Characters(sublime_plugin.EventListener):
                             name = name.split(' (OS)')[0]
                             name = name.split(' (VO)')[0]
                             name = name.split(" (CONT'D)")[0]
+
+                            # swedish
+                            name = name.split(' (U.B.)')[0]
+                            name = name.split(' (FORTS.)')[0]
+
                             if name[0] == ' ' or name[0] == '\t':
                                 name = (re.split(r'^\s*', name))[1]
                             if name not in self.characters and name != '' and name is not None:
